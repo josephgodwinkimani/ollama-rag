@@ -1,0 +1,89 @@
+{
+  "name": "ollamarag",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://github.com/josephgodwinkimani/ollama-rag",
+  "bugs": {
+    "url": "https://github.com/josephgodwinkimani/ollama-rag/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josephgodwinkimani/ollama-rag.git"
+  },
+  "authors": [
+    {
+      "name": "Godwin Kimani"
+    }
+  ],
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.{css}": [
+      "stylelint --fix",
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "vite",
+    "dev:server": "tsx watch server/index.ts",
+    "build:client": "tsc && vite build",
+    "build:server": "tsc --project server/tsconfig.json",
+    "lint": "eslint src/ server/ --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src/ server/ --ext ts,tsx --fix",
+    "lint:style": "stylelint \"src/**/*.css\" --allow-empty-input",
+    "lint:style:fix": "stylelint \"src/**/*.css\" --fix  --allow-empty-input",
+    "validate": "concurrently \"npm run lint:fix\" \"npm run lint:style:fix\"",
+    "preview": "vite preview",
+    "prepare": "npx husky init"
+  },
+  "dependencies": {
+    "@dqbd/tiktoken": "^1.0.20",
+    "axios": "^1.8.1",
+    "chromadb": "^1.10.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "langchain": "^0.3.19",
+    "multer": "^1.4.5-lts.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-dropzone": "^14.3.8",
+    "react-syntax-highlighter": "^15.6.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@tailwindcss/vite": "^4.0.9",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.13.8",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.2",
+    "stylelint": "^16.15.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-config-tailwindcss": "^1.0.0",
+    "tailwindcss": "^4.0.9",
+    "tsx": "^4.19.3",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0"
+  }
+}
