@@ -23,7 +23,7 @@ $ npm run dev
 
 ## Trademark Acknowledgment
 
-"Ollama" and the Ollama logo are trademarks or registered trademarks of Ollama, Inc. This project, "OllamaCoder", is an independent and unofficial interface developed by the community and is not affiliated with, sponsored by, or endorsed by Ollama, Inc.
+"Ollama" and the Ollama logo are trademarks or registered trademarks of Ollama, Inc. This project, "OllamaRAG", is an independent and unofficial interface developed by the community and is not affiliated with, sponsored by, or endorsed by Ollama, Inc.
 
 ## Fair Use Statement
 
